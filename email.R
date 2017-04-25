@@ -7,6 +7,7 @@ sheet <- gs_title("CascadiaRConf-Submissions")
 dat <- gs_read(sheet)
 dat <- dat[-c(1,2), c('First Name', 'Email', 'Talk Title')]
 datlist <- apply(dat, 1, as.list)
+datlist <- datlist[56:length(datlist)]
 
 # send emails
 email_text <- "Hi %s
